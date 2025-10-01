@@ -93,17 +93,14 @@ const enabledButton = computed(() => {
 
 function createTask() {
   store.createTask(taskTitle.value, taskDescription.value, chosenStatus.value)
-  store.fetchAllTasks()
   emit('close')
 }
 function changeTask() {
   store.changeTask(props.itemData.id, taskTitle.value, taskDescription.value, chosenStatus.value)
-  store.fetchAllTasks()
   emit('close')
 }
 function removeTask() {
   store.removeTask(props.itemData.id)
-  store.fetchAllTasks()
   emit('close')
 }
 
